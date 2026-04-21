@@ -35,16 +35,18 @@ First Aid, Citizenship in the Community — wait, see below. Completed: Citizens
 
 | # | Requirement | Status | Notes |
 |---|-------------|--------|-------|
-| 1 | Active 6+ months as Life Scout | ✅ Complete | Life earned 08/15/2025; 8 months active |
-| 2 | Demonstrate Scout Spirit | ⏱️ Time-Dependent | Assessed at Board of Review — no action needed now |
-| 3a | 14 Eagle-required merit badges | 🔄 In-Progress | 10 of 14 complete; 4 remaining (see below) |
-| 3b | 7 optional merit badges (21 total) | ✅ Complete | Has 17 total; 7+ electives satisfied |
-| 4 | Position of Responsibility (6 months post-Life) | ✅ Complete | Patrol Leader since 09/2025; 6 months reached 02/2026 |
-| 5 | Eagle Scout Service Project | 🔄 In-Progress | Concept approved verbally; written proposal not yet submitted |
-| 6 | Statement of ambitions and life purpose | ⬜ Not Started | One-page essay; complete with Scoutmaster |
-| 7 | Six references (parent, adult, teacher, employer/school, religious, peer) | ⬜ Not Started | Request letters by July 1 |
-| 8 | Scoutmaster Conference | ⬜ Not Started | Schedule after all requirements complete (target: September 1) |
-| 9 | Board of Review | ⬜ Not Started | Schedule after Scoutmaster Conference (target: September 15) |
+| 1 | Be active in your troop for at least 6 months as a Life Scout | ✅ Complete | Life earned 08/15/2025; 8 months active |
+| 2 | Demonstrate Scout Spirit; list references on Eagle Scout Rank Application; prepare statement of ambitions and life purpose | 🔄 In-Progress | Spirit assessed at Board of Review. References and statement must be attached to Eagle application — see below |
+| 3 | Earn 21 merit badges (14 required + 7 optional) | 🔄 In-Progress | 17 total earned; 4 required badges remaining (see detail below) |
+| 4 | While a Life Scout, serve 6 months in a Position of Responsibility | ✅ Complete | Patrol Leader since 09/2025; 6 months reached 02/2026 |
+| 5 | Plan, develop, and give leadership to an Eagle Scout Service Project | 🔄 In-Progress | Concept discussed; written proposal not yet submitted for approval |
+| 6 | While a Life Scout, participate in a Scoutmaster Conference | ⬜ Not Started | Schedule after all other requirements complete (target: September 1) |
+| 7 | Successfully complete your Board of Review | ⬜ Not Started | Schedule promptly after Scoutmaster Conference (target: September 15) |
+
+**Eagle Rank Application — Required Attachments (part of Req 2):**
+- Statement of ambitions and life purpose ⬜ Not Started
+- List of positions held in religious institution, school, camp, community, or other organizations ⬜ Not Started
+- References on the Eagle Scout Rank Application: parents/guardians, religious, educational, employer (if employed), and two others ⬜ Not Started — request letters by July 1
 
 **4 Remaining Eagle-Required Merit Badges:**
 
@@ -193,7 +195,7 @@ First Aid, Citizenship in the Community — wait, see below. Completed: Citizens
 **Theme:** Eagle Project Approval + Citizenship Badge Push
 
 **Checklist of Targeted Requirements:**
-- [ ] Eagle Project: Submit final proposal; obtain Scoutmaster, committee, and council approval by May 15
+- [ ] Eagle Project: Submit final proposal — obtain approvals in required order: (1) benefiting organization, (2) Scoutmaster + unit committee, (3) council or district — all before any work begins; target May 15
 - [ ] Eagle Project: Begin recruiting volunteers; purchase or acquire materials by May 31
 - [ ] ⚡ Citizenship in Community 3a + Communication 5: Attend one public meeting (city council or school board) — covers both badges
 - [ ] ⚡ Citizenship in Community 4a–4c + Communication 4: Interview a local official — covers both badges
@@ -230,7 +232,7 @@ First Aid, Citizenship in the Community — wait, see below. Completed: Citizens
 - [ ] Citizenship in Community 8: Develop and present community presentation (slideshow, speech, or video)
 - [ ] Communication 3: Deliver 5-minute speech at troop meeting
 - [ ] Communication 6: Teach a skill or concept at troop meeting using prepared aids
-- [ ] Communication 7: Complete 8-hour service project (may overlap with Eagle project service hours)
+- [ ] Communication 7: Scoutmaster-approved service project — discuss with counselor whether Eagle project hours can count; counselor must individually approve any overlap
 - [ ] Family Life 5: Plan and carry out family project with parents
 - [ ] Family Life 6a–6b: Hold family meeting(s) using prepared agenda
 - [ ] Family Life 7: Discuss parenting responsibilities with counselor

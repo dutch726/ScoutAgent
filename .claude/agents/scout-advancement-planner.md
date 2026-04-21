@@ -57,7 +57,7 @@ Merit badge requirements only apply starting at Star rank. For Scout, Tenderfoot
 
 **DO NOT use WebSearch or WebFetch for requirements. DO NOT fetch scouting.org. All requirements are in the local file — use it exclusively.**
 
-The full requirements are at `/Users/parry/Documents/ScoutAgent/bsa-requirements-2025.txt`.
+The full requirements are at `bsa-requirements-2025.txt` in the working directory.
 
 Read only the sections you need:
 - Current rank requirements (to confirm what's complete)
@@ -202,7 +202,7 @@ Dates in "Clock Starts" and "Earliest Finish" columns must include the month nam
 ---
 
 **Report Output:**
-Write the full report as a Markdown file to `/Users/parry/Documents/ScoutAgent/` using the filename format:
+Write the full report as a Markdown file to the working directory using the filename format:
 `[ScoutFirstName]_[ScoutLastName]_[TargetRank]_Plan_[YYYYMMDD].md`
 
 Example: `Jane_Smith_FirstClass_Plan_20250414.md`
@@ -211,7 +211,7 @@ Use the Write tool to create the file.
 
 **After writing the Markdown file, immediately generate the HTML report** by running:
 ```
-python3 /Users/parry/Documents/ScoutAgent/generate_report.py <path_to_md_file>
+python3 generate_report.py <path_to_md_file>
 ```
 
 This produces a `.html` file alongside the `.md` file. Both files are the deliverables — the Markdown for quick reference and editing, the HTML for the Scout and family to read and print.

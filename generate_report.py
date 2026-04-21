@@ -52,8 +52,8 @@ CSS = """
     font-size: 22px; font-weight: 700; letter-spacing: .4px;
     margin-bottom: 12px; color: white;
   }
-  .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px,1fr)); gap: 4px 20px; }
-  .meta-item { font-size: 12.5px; color: rgba(255,255,255,.85); }
+  .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 4px 20px; }
+  .meta-item { font-size: 12.5px; color: rgba(255,255,255,.85); text-wrap: balance; }
   .meta-item strong { color: var(--tan); font-weight: 600; }
 
   /* ── Content ── */
@@ -68,12 +68,12 @@ CSS = """
   }
 
   /* ── Headings inside sections ── */
-  h1,h2,h3,h4 { font-weight: 700; color: var(--green); margin: 18px 0 8px; }
+  h1,h2,h3,h4 { font-weight: 700; color: var(--green); margin: 18px 0 8px; text-wrap: balance; }
   h2 { font-size: 17px; border-bottom: 2px solid var(--tan); padding-bottom: 6px; margin-top: 28px; }
   h3 { font-size: 14.5px; }
   h4 { font-size: 13px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
   hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
-  p  { margin: 8px 0; }
+  p  { margin: 8px 0; text-wrap: pretty; }
 
   /* ── Status spans ── */
   .st-complete   { color: #1a7f3c; }
@@ -94,7 +94,7 @@ CSS = """
 
   /* ── Lists ── */
   ul,ol { margin: 6px 0 6px 20px; }
-  li    { margin: 3px 0; font-size: 13px; }
+  li    { margin: 3px 0; font-size: 13px; text-wrap: pretty; }
   li.checkbox-item { list-style: none; margin-left: -20px; display: flex; gap: 6px; align-items: baseline; }
   .checkbox { flex-shrink: 0; color: var(--muted); }
   li.checkbox-item.checked .checkbox { color: #1a7f3c; }
@@ -146,6 +146,7 @@ CSS = """
     background: var(--tan2); color: var(--green);
     font-size: 11px; font-style: italic; padding: 4px 12px;
     border-bottom: 1px solid var(--border);
+    text-wrap: balance;
   }
   .month-card-body { padding: 10px 12px; }
   .month-card-body h3 { display: none; }
@@ -172,7 +173,7 @@ CSS = """
   }
   .week-card-header .week-num { font-weight: 700; font-size: 13px; }
   .week-card-header .week-dates { font-size: 11px; opacity: .8; }
-  .week-card-theme { background: var(--tan2); color: var(--green); font-size: 11px; font-style: italic; padding: 4px 12px; border-bottom: 1px solid var(--border); }
+  .week-card-theme { background: var(--tan2); color: var(--green); font-size: 11px; font-style: italic; padding: 4px 12px; border-bottom: 1px solid var(--border); text-wrap: balance; }
   .week-card-body { padding: 10px 12px; }
   .week-card-body h3 { display: none; }
   .week-card-body h4 { font-size: 10.5px; margin: 7px 0 3px; color: var(--muted); }
@@ -225,6 +226,7 @@ CSS = """
     .month-grid, .week-grid { grid-template-columns: 1fr 1fr; }
     .month-card, .week-card { break-inside: avoid; }
     h2 { page-break-after: avoid; }
+    p, li { widows: 3; orphans: 3; }
   }
 """
 

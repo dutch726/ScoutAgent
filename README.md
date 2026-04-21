@@ -10,12 +10,12 @@ The agent produces a Markdown plan file. A companion script converts it to a pri
 
 | Scout | Current Rank | Target Rank | Situation |
 |-------|-------------|-------------|-----------|
-| [Johnny Scout](Johnny_Scout_Eagle_Plan_20260420.md) | Life | Eagle | 4 merit badges remaining, Eagle project in progress, 6 months until 18th birthday — time-critical plan |
-| [Jane Scout](Jane_Scout_FirstClass_Plan_20260420.md) | Tenderfoot | First Class | Halfway through Second Class, plan covers both intermediate ranks |
+| [Johnny Scout](Plans/Johnny_Scout_Eagle_Plan_20260420.md) | Life | Eagle | 4 merit badges remaining, Eagle project in progress, 6 months until 18th birthday — time-critical plan |
+| [Jane Scout](Plans/Jane_Scout_FirstClass_Plan_20260420.md) | Tenderfoot | First Class | Halfway through Second Class, plan covers both intermediate ranks |
 
 View the rendered HTML reports:
-- [Johnny Scout — Eagle Plan](Johnny_Scout_Eagle_Plan_20260420.html)
-- [Jane Scout — First Class Plan](Jane_Scout_FirstClass_Plan_20260420.html)
+- [Johnny Scout — Eagle Plan](Plans/Johnny_Scout_Eagle_Plan_20260420.html)
+- [Jane Scout — First Class Plan](Plans/Jane_Scout_FirstClass_Plan_20260420.html)
 
 ---
 
@@ -45,9 +45,9 @@ The CSV lists every rank requirement and merit badge with its completion date. P
    - Target rank
    - Advancement data (Scoutbook CSV, pasted text, or file path)
    - Date of birth (required if target rank is Eagle or Scout is 15+)
-3. The agent reads the BSA requirements file, performs gap analysis, and produces two files:
-   - **`[Name]_[Rank]_Plan_[Date].md`** — the full plan in Markdown for quick reference and editing
-   - **`[Name]_[Rank]_Plan_[Date].html`** — a formatted report for the Scout and family to read and print
+3. The agent reads the BSA requirements file, performs gap analysis, and produces two files inside the `Plans/` folder:
+   - **`Plans/[Name]_[Rank]_Plan_[Date].md`** — the full plan in Markdown for quick reference and editing
+   - **`Plans/[Name]_[Rank]_Plan_[Date].html`** — a formatted report for the Scout and family to read and print
 
 Open the `.html` file in any browser. To save as PDF: **File → Print → Save as PDF**.
 

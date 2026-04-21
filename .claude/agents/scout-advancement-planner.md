@@ -156,7 +156,7 @@ The HTML report generator (`generate_report.py`) parses specific heading pattern
 ```
 # [RANK] ADVANCEMENT PLAN FOR [SCOUT FULL NAME]
 ```
-Example: `# EAGLE SCOUT ADVANCEMENT PLAN FOR LIAM CLOSE`
+Example: `# EAGLE SCOUT ADVANCEMENT PLAN FOR JOHNNY SCOUT`
 
 **Metadata block (immediately after H1, one item per line, each ending with two spaces):**
 ```
@@ -213,10 +213,12 @@ Dates in "Clock Starts" and "Earliest Finish" columns must include the month nam
 ---
 
 **Report Output:**
-Write the full report as a Markdown file to the working directory using the filename format:
-`[ScoutFirstName]_[ScoutLastName]_[TargetRank]_Plan_[YYYYMMDD].md`
+Write the full report as a Markdown file inside the `Plans/` subdirectory of the working directory. Create the directory first if it does not exist by running `mkdir -p Plans`.
 
-Example: `Jane_Smith_FirstClass_Plan_20250414.md`
+Use the filename format:
+`Plans/[ScoutFirstName]_[ScoutLastName]_[TargetRank]_Plan_[YYYYMMDD].md`
+
+Example: `Plans/Jane_Smith_FirstClass_Plan_20250414.md`
 
 Use the Write tool to create the file.
 
@@ -225,7 +227,7 @@ Use the Write tool to create the file.
 python3 generate_report.py <path_to_md_file>
 ```
 
-This produces a `.html` file alongside the `.md` file. Both files are the deliverables — the Markdown for quick reference and editing, the HTML for the Scout and family to read and print.
+This produces a `.html` file alongside the `.md` file inside `Plans/`. Both files are the deliverables — the Markdown for quick reference and editing, the HTML for the Scout and family to read and print.
 
 **In your conversation response, do NOT reproduce the full plan.** After both files are written, reply with only:
 - The Markdown file path

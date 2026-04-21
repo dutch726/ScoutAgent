@@ -81,12 +81,14 @@ First Aid, Citizenship in the Community — wait, see below. Completed: Citizens
 |-----|--------------|--------|
 | 1a–1c | Choose a major purchase; develop savings and comparison-shopping plans | ⬜ Not started |
 | 2a–2d | Prepare a 13-week budget; track actual income and expenses; compare and discuss | ⏱️ **13 WEEKS — start April 20** |
-| 3 | Discuss the dangers of debt; explain interest and wise credit use | ⬜ Not started |
-| 4 | Discuss investing basics (stocks, bonds, mutual funds) with counselor | ⬜ Not started |
-| 5 | Visit a financial institution; learn about accounts and services | ⬜ Not started |
-| 6 | Discuss the importance of a will and other estate planning tools | ⬜ Not started |
-| 7 | Review and discuss a pay stub; understand deductions | ⬜ Not started |
-| 8 | Demonstrate time-management skills by preparing a daily schedule for one week | ⬜ Not started |
+| 3 | Discuss with counselor FIVE of the following money concepts: emotions when receiving money; how cash on hand affects spending; buyer's remorse; hunger and grocery shopping; advertising influence; savings accounts; charitable giving; better money management | ⬜ Not started |
+| 4 | Explain to counselor: differences between saving and investing; return on investment and risk; simple vs compound interest; diversification; why saving for retirement matters | ⬜ Not started |
+| 5 | Explain how each of these investments works: common stocks; mutual funds; life insurance; certificate of deposit (CD); savings account; U.S. savings bond | ⬜ Not started |
+| 6 | Explain why people purchase these types of insurance and how they work: automobile; health; homeowner's/renter's; whole life and term life | ⬜ Not started |
+| 7 | Explain to counselor: what a loan is and how APR measures its true cost; different ways to borrow money; differences between charge, debit, and credit cards and their pitfalls; credit reports; ways to reduce or eliminate debt | ⬜ Not started |
+| 8 | Demonstrate time management: write a weekly to-do list in order of importance; make a 7-day calendar with set activities and planned tasks; follow the schedule for one week; keep a daily journal; review results with counselor | ⬜ Not started |
+| 9 | Prepare a written project plan (on paper, not real-life) that includes: goal, timeline, description, resources list, and budget. Discuss with counselor | ⬜ Not started |
+| 10 | Choose a career you might want; discuss needed qualifications, education, skills, and experience with counselor; explain associated costs and how you would prepare for them | ⬜ Not started |
 
 **Earliest completion: July 20, 2026 (if 13-week tracking starts April 20)**
 
@@ -94,15 +96,15 @@ First Aid, Citizenship in the Community — wait, see below. Completed: Citizens
 
 | Req | What It Asks | Status |
 |-----|--------------|--------|
-| 1 | Choose one: maintain a log, keep a journal, conduct group discussion, or list methods | ⬜ Not started |
-| 2 | Create a self-description (collage, story, drawing, photos, song, or skit); present to counselor | ⬜ Not started |
-| 3 | Write and deliver a 5-minute speech at a troop meeting or public gathering | ⬜ Not started |
-| 4 | Interview a community leader; write a 5-minute introduction as guest speaker | ⬜ Not started |
-| 5 | Attend a public meeting; take notes; prepare an objective report | ⬜ Not started |
-| 6 | Teach a skill or concept using prepared teaching aids | ⬜ Not started |
-| 7 | Plan and participate in a Scoutmaster-approved service project (8+ hours) | ⬜ Not started |
-| 8 | Select and read a book approved by counselor; write a 200-word report | ⬜ Not started |
-| 9 | Research three communication careers; discuss with counselor | ⬜ Not started |
+| 1 | Do ONE of: (a) Keep a one-day communication log; OR (b) Keep a 3-day listening journal with four categories; OR (c) In a small group, observe how Scouts communicate stories and report findings; OR (d) List ways to communicate; discuss when each is inappropriate | ⬜ Not started |
+| 2 | Do ONE of: (a) Create a self-description (collage, story, drawing, photos, song, skit) and present it; OR (b) Build a sales plan for a concept, product, or service and try to persuade the counselor | ⬜ Not started |
+| 3 | Write a five-minute speech and deliver it at a meeting of a group | ⬜ Not started |
+| 4 | Interview someone you respect; then prepare and deliver to counselor a 5-minute introduction as though this person were a guest speaker; show how you would invite them | ⬜ Not started |
+| 5 | Attend a counselor-approved public meeting (city council, school board, debate); take notes on all points of view; prepare an objective report and share it | ⬜ Not started |
+| 6 | With counselor approval, develop a plan to teach a skill or inform someone about something; prepare teaching aids; carry out the plan; assess whether the person learned what was intended | ⬜ Not started |
+| 7 | Do ONE of: (a) Write to the editor of a magazine or local newspaper expressing an opinion; send by fax, email, or mail; OR (b) Create a webpage or blog with 3+ articles, one photo, and one link; OR (c) Use desktop publishing to produce a newsletter, brochure, or flyer for your troop, class, or other group | ⬜ Not started |
+| 8 | Plan a troop court of honor, campfire program, or interfaith worship service; have the patrol leaders' council approve it; write the script and prepare the program; serve as master of ceremonies | ⬜ Not started |
+| 9 | Find out about three career opportunities in communication; pick one; find out the education, training, and experience required; discuss with counselor | ⬜ Not started |
 
 **Earliest completion: June 15, 2026 (no time-lock; scheduling only)**
 
@@ -205,7 +207,7 @@ First Aid, Citizenship in the Community — wait, see below. Completed: Citizens
 - [ ] Citizenship in Community 6: List taxpayer-funded services; discuss importance
 - [ ] Communication 1: Complete log, journal, or discussion requirement
 - [ ] Communication 2: Create self-description project; present to counselor
-- [ ] Communication 8: Select and read approved book; write 200-word report
+- [ ] Communication 8: Plan troop court of honor, campfire program, or interfaith worship service; get Patrol Leaders' Council approval; write script; serve as master of ceremonies
 - [ ] Communication 9: Research three communication careers; discuss with counselor
 - [ ] Family Life 4: Plan and carry out individual home project
 - [ ] Statement of ambitions and life purpose: Draft essay; review with Scoutmaster
@@ -232,7 +234,7 @@ First Aid, Citizenship in the Community — wait, see below. Completed: Citizens
 - [ ] Citizenship in Community 8: Develop and present community presentation (slideshow, speech, or video)
 - [ ] Communication 3: Deliver 5-minute speech at troop meeting
 - [ ] Communication 6: Teach a skill or concept at troop meeting using prepared aids
-- [ ] Communication 7: Scoutmaster-approved service project — discuss with counselor whether Eagle project hours can count; counselor must individually approve any overlap
+- [ ] Communication 7: ONE of: (a) write a letter to the editor of a magazine or newspaper, (b) create a webpage or blog with 3+ entries and one photo/link, or (c) use desktop publishing to create a newsletter or brochure for your troop or a group
 - [ ] Family Life 5: Plan and carry out family project with parents
 - [ ] Family Life 6a–6b: Hold family meeting(s) using prepared agenda
 - [ ] Family Life 7: Discuss parenting responsibilities with counselor
@@ -364,7 +366,7 @@ First Aid, Citizenship in the Community — wait, see below. Completed: Citizens
 
 **Specific Requirements Targeted:**
 - ⚡ Communication 5 + Citizenship in Community 3a–3b: Attend one public meeting
-- Communication 8: Begin reading approved book
+- Communication 8: Begin planning the court of honor/campfire/worship service program; draft outline for Patrol Leaders' Council approval
 - Communication 9: Research three communication careers
 - Eagle project: Address any Scoutmaster feedback on proposal
 
@@ -427,7 +429,7 @@ First Aid, Citizenship in the Community — wait, see below. Completed: Citizens
 **Specific Requirements Targeted:**
 - Citizenship in Community 7a–7c: Complete 8 volunteer hours; discuss with counselor
 - Citizenship in Community 8: Deliver community presentation
-- Communication 8: Complete book report (200 words)
+- Communication 8: Get Patrol Leaders' Council approval for program plan; write script; serve as master of ceremonies
 - Communication 9: Discuss three communication careers with counselor
 
 **Signature/Action Items:**

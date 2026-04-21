@@ -41,7 +41,7 @@ Cooking, Chess, Citizenship in Society
 | 2b | Prepare tinder, kindling, and fuel wood using pocketknife, saw, or axe | ⬜ Not Started | Requires outdoor skills session |
 | 2c | Build a fire using materials from 2b; safely extinguish it | ⬜ Not Started | Campout or fire-building event |
 | 2d | Explain proper stove use; set up and light a lightweight or propane stove | ⬜ Not Started | Can be done at campout or skills session |
-| 2e | Plan and cook a hot breakfast and lunch on a campout using MyPlate nutrition | ⬜ Not Started | Campout-based cooking skills |
+| 2e | On one campout, plan and cook ONE hot breakfast OR lunch, selecting foods from MyPlate or current USDA nutritional model; explain good nutrition; demonstrate how to transport, store, and prepare the selected foods | ⬜ Not Started | Campout-based cooking skills |
 | 2f | Demonstrate sheet bend knot and describe its use | ✅ Complete | |
 | 2g | Demonstrate bowline knot and describe its use | ✅ Complete | |
 | 3a | Use compass and map; identify 5 map symbols | ✅ Complete | |
@@ -78,37 +78,44 @@ Cooking, Chess, Citizenship in Society
 
 | # | Requirement | Status | Notes |
 |---|-------------|--------|-------|
-| 1a | Participate in 10 separate troop/patrol activities (6+ outdoor, 3+ camping) | ⬜ Not Started | Builds on Second Class 1a progress |
-| 1b | Explain outdoor impacts; discuss Outdoor Code and Leave No Trace | ⬜ Not Started | Knowledge-based |
-| 2a | Help plan a campout menu (breakfast, lunch, dinner; 2+ cooked meals) | ⬜ Not Started | Menu planning with patrol |
-| 2b | Create budget list; secure ingredients for campout | ⬜ Not Started | Part of campout planning |
-| 2c | Identify cooking equipment (pans, utensils, gear) and their proper use | ⬜ Not Started | Gear knowledge |
-| 2d | Demonstrate food safety and waste disposal at a campout | ⬜ Not Started | Applied at campout |
-| 2e | Serve as cook for a patrol on a campout; supervise two meals | ⬜ Not Started | Leadership cooking role |
-| 3a | Discuss changes to camping plans due to weather or emergencies | ⬜ Not Started | Contingency planning |
-| 3b | Demonstrate three ways to start a fire without matches | ⬜ Not Started | Fire-starting skills |
-| 3c | Demonstrate how to use and maintain a fixed-blade and folding knife | ⬜ Not Started | Knife safety |
-| 4a | Complete an orienteering course that covers at least 1 mile | ⬜ Not Started | Navigation event |
-| 4b | Plan and lead a navigation activity using a map and compass for your patrol | ⬜ Not Started | Leadership navigation |
-| 5a | Identify or show evidence of 10 different wild plants | ⬜ Not Started | Nature observation |
-| 5b | Demonstrate preparation of two types of wild plants for eating | ⬜ Not Started | Wilderness skill |
-| 5c | Discuss three methods of weather observation | ⬜ Not Started | Weather knowledge |
-| 5d | Forecast weather for 12 hours; compare results | ⬜ Not Started | Weather tracking activity |
-| 6a | Demonstrate first aid for hypothermia, frostbite, heat exhaustion, and heat stroke | ⬜ Not Started | Advanced first aid |
-| 6b | Explain what to do if a small craft capsizes | ⬜ Not Started | Water safety |
-| 6c | Demonstrate how to rescue a conscious person who has fallen through ice | ⬜ Not Started | Ice rescue safety |
-| 6d | Demonstrate Heimlich maneuver on a person and on an infant mannequin | ⬜ Not Started | First aid skill |
-| 6e | Show how to transport someone with an injured back, neck, or hip | ⬜ Not Started | First aid carry techniques |
-| 7 | Tell someone who is new to your community about local natural resources | ⬜ Not Started | Community knowledge |
-| 8a | Be physically active 30 min/day, 5 days/week for 4 weeks (after completing SC 7a) | ⏱️ Time-Based | Second 4-week activity period |
-| 8b | Share challenges and successes; set a new fitness goal | ⏱️ Dependent on 8a | Complete after 8a |
-| 9a | Visit or meet with an elected official or civic leader in your community | ⬜ Not Started | Civic engagement activity |
-| 9b | Identify an environmental issue in your community; present findings to your patrol | ⬜ Not Started | Research and present |
-| 9c | On an outing, keep track of trash you and your patrol generate; plan to reduce it | ⬜ Not Started | Environmental practice |
-| 9d | Participate in 3 hours of service focused on a conservation or environmental project | ⬜ Not Started | Service activity |
-| 10 | Demonstrate Scout Spirit; discuss duty to God and remaining points of Scout Law | ⬜ Not Started | Reflection with Scoutmaster |
-| 11 | Scoutmaster Conference | ⬜ Not Started | Schedule after all requirements |
-| 12 | Board of Review | ⬜ Not Started | Final approval |
+| 1a | Since joining, participate in 10 separate troop/patrol activities (6+ outdoor, 3+ overnight camping); spend nights in a tent you pitch | ⬜ Not Started | Builds on SC 1a; activities exclude troop meetings |
+| 1b | Explain the potential impacts of camping on the environment and other outdoor users; explain why the Outdoor Code and Leave No Trace are important | ⬜ Not Started | Knowledge-based |
+| 2a | Help plan a campout menu with at least one breakfast, one lunch, and one dinner, requiring cooking at least two meals; explain how it meets MyPlate nutritional needs | ⬜ Not Started | Menu planning with patrol |
+| 2b | Using the menu from FC 2a, make a budget and food amounts list to feed 3+ youth; secure the ingredients | ⬜ Not Started | Part of campout planning |
+| 2c | Show which pans, utensils, and gear will be needed to cook and serve the meals from FC 2a | ⬜ Not Started | Gear knowledge |
+| 2d | Demonstrate safe handling and storage of fresh meats, dairy, eggs, vegetables, and other perishables; show how to properly dispose of camp garbage and waste water | ⬜ Not Started | Applied at campout |
+| 2e | On one campout, serve as cook; supervise assistants using a stove or cooking fire; prepare the breakfast, lunch, and dinner planned in FC 2a; supervise cleanup | ⬜ Not Started | Leadership cooking role |
+| 3a | Discuss when you should and should not use lashings | ⬜ Not Started | Knowledge-based |
+| 3b | Demonstrate tying the timber hitch and clove hitch | ⬜ Not Started | Knot skills |
+| 3c | Demonstrate tying the square, shear, and diagonal lashings by joining two or more poles or staves | ⬜ Not Started | Lashing skills |
+| 3d | Use lashings to make a useful camp gadget or structure | ⬜ Not Started | Applied lashing project |
+| 4a | Using a map and compass, complete an orienteering course of at least 1 mile that requires measuring the height or width of designated items | ⬜ Not Started | Navigation event |
+| 4b | Demonstrate how to use a handheld GPS unit, GPS app, or other electronic navigation system on a campout or hike; find current location, a destination, and the route; follow it | ⬜ Not Started | GPS/electronic navigation |
+| 5a | Identify or show evidence of at least 10 kinds of native plants in your local area or campsite (fallen leaves, fruit, collection, or photos) | ⬜ Not Started | Nature observation |
+| 5b | Identify two ways to obtain a weather forecast for an upcoming activity; explain why forecasts are important | ⬜ Not Started | Weather knowledge |
+| 5c | Describe at least three natural indicators of impending hazardous weather, the potential dangerous events, and appropriate actions | ⬜ Not Started | Weather awareness |
+| 5d | Describe extreme weather conditions in your local area; discuss how to determine risk ahead of time, alternative planning, and how to prepare and respond | ⬜ Not Started | Weather preparedness |
+| 6a | Successfully complete the Scouting America swimmer test | ⬜ Not Started | Must be done at pool or suitable water |
+| 6b | Tell what precautions must be taken for a safe trip afloat | ⬜ Not Started | Boating safety knowledge |
+| 6c | Identify the basic parts of a canoe, kayak, or other boat; identify the parts of a paddle or oar | ⬜ Not Started | Watercraft knowledge |
+| 6d | Describe proper body positioning in a watercraft depending on type and size; explain why body position matters | ⬜ Not Started | Watercraft safety |
+| 6e | With a helper and practice victim, show a line rescue both as tender and as rescuer (victim approx. 30 feet from shore in deep water) | ⬜ Not Started | Water rescue skill |
+| 7a | Demonstrate bandaging for a sprained ankle and for injuries to the head, upper arm, and collarbone | ⬜ Not Started | First aid skills |
+| 7b | By yourself and with a partner, show how to transport a person from a smoke-filled room; transport a person with a sprained ankle at least 25 yards | ⬜ Not Started | First aid carries |
+| 7c | Tell the five most common signals of a heart attack; explain the steps in CPR | ⬜ Not Started | Heart emergency knowledge |
+| 7d | Tell what utility services exist in your home or meeting place; describe hazards and how to respond in emergencies | ⬜ Not Started | Home safety knowledge |
+| 7e | Develop an emergency action plan for your home covering fire, storm, power outage, and water outage | ⬜ Not Started | Home emergency planning |
+| 7f | Explain how to obtain potable water in an emergency | ⬜ Not Started | Survival knowledge |
+| 8a | After completing SC 7a, be physically active 30 min/day, 5 days/week for 4 weeks; keep track of activities | ⏱️ Time-Based | Second 4-week activity period |
+| 8b | Share challenges and successes from FC 8a; set a goal for continuing physical activity as part of daily life | ⏱️ Dependent on 8a | Complete after 8a |
+| 9a | Visit and discuss with an approved individual (elected official, judge, attorney, civil servant, principal, or teacher) the constitutional rights and obligations of a U.S. citizen | ⬜ Not Started | Civic engagement |
+| 9b | Investigate an environmental issue affecting your community; share findings with your patrol or troop; tell what could be done to address it | ⬜ Not Started | Research and present |
+| 9c | On a Scouting or family outing, track trash produced; before the next similar outing, plan to reduce/recycle/repurpose; put plans into action; compare results | ⬜ Not Started | Environmental practice |
+| 9d | Participate in 3 hours of service through Scoutmaster-approved projects (must be different projects from those used for Tenderfoot 7b and SC 8e); explain how service relates to Scout Law | ⬜ Not Started | Service activity |
+| 10 | Tell someone eligible to join Scouts BSA (or an inactive Scout) about your Scouting activities; invite them to an event; provide joining information; share your efforts with Scoutmaster | ⬜ Not Started | Membership outreach |
+| 11 | Demonstrate Scout Spirit by living the Scout Oath and Scout Law; tell how you have done your duty to God and lived four different points of the Scout Law (different from those used for previous ranks) | ⬜ Not Started | Reflection with Scoutmaster |
+| 12 | While working toward First Class, and after completing SC requirement 11, participate in a Scoutmaster Conference | ⬜ Not Started | Schedule after all requirements |
+| 13 | Successfully complete your Board of Review for the First Class rank | ⬜ Not Started | Final approval |
 
 ---
 
@@ -194,7 +201,7 @@ Cooking, Chess, Citizenship in Society
 **Theme:** First Summer Campout — Big Requirements Block
 
 **Checklist of Targeted Requirements:**
-- [ ] ⚡ Campout: SC 1a (activity count), SC 1c (campsite selection), SC 2c (fire), SC 2d (stove), SC 2e (cook breakfast and lunch), SC 6c (first aid prevention) — all at once
+- [ ] ⚡ Campout: SC 1a (activity count), SC 1c (campsite selection), SC 2c (fire), SC 2d (stove), SC 2e (cook ONE hot breakfast or lunch using MyPlate nutritional model), SC 6c (first aid prevention) — all at once
 - [ ] SC 5b: Pass beginner swim test at pool or lake outing
 - [ ] SC 5c: Demonstrate reach and throw water rescue methods
 - [ ] SC 8e: Complete 2 hours of service at an approved community project
@@ -220,7 +227,9 @@ Cooking, Chess, Citizenship in Society
 **Checklist of Targeted Requirements:**
 - [ ] SC 4: Complete identification of 10 wild animals (photos, tracks, or direct observation)
 - [ ] FC 4a: Complete an orienteering course of 1+ mile
-- [ ] FC 6b–6d: Capsizing response, ice rescue, Heimlich maneuver
+- [ ] FC 6a: Complete the Scouting America swimmer test (full swimmer qualification, not beginner test)
+- [ ] FC 6b–6d: Learn boating safety precautions; identify canoe/kayak parts and paddle; describe proper body positioning in watercraft
+- [ ] FC 6e: With a helper and practice victim, demonstrate line rescue as both tender and rescuer (~30 feet from shore)
 - [ ] FC 9a: Visit or meet with an elected official or civic leader
 - [ ] FC 9b: Identify an environmental issue; present findings to patrol
 - [ ] FC 5a: Identify 10 wild plants on a hike or nature walk
@@ -231,7 +240,7 @@ Cooking, Chess, Citizenship in Society
 - No active time-based trackers this month
 
 **Leader Actions Needed:**
-- Troop: Arrange pool session for FC 6b–6d; plan orienteering event
+- Troop: Arrange pool or waterfront session for FC 6a swimmer test + FC 6e line rescue; FC 6b–6d are knowledge-based and can be covered at a troop meeting; plan orienteering event for FC 4a
 - Scoutmaster: Help identify local elected official for FC 9a visit
 - Parents: Support nature identification outings for SC 4 and FC 5a
 
@@ -242,12 +251,12 @@ Cooking, Chess, Citizenship in Society
 **Theme:** Second Campout + Cooking Leadership
 
 **Checklist of Targeted Requirements:**
-- [ ] ⚡ Campout: FC 1a (activity count), FC 2a–2e (lead patrol cooking), FC 3a (weather/emergency contingency planning), FC 9c (trash audit)
-- [ ] FC 3b: Demonstrate three ways to start a fire without matches
-- [ ] FC 3c: Demonstrate use and care of fixed-blade and folding knife
-- [ ] FC 5b: Prepare two wild plants for eating (identify first in July)
-- [ ] FC 5c–5d: Observe weather methods; forecast for 12 hours; compare results
-- [ ] FC 6e: Demonstrate how to transport someone with a back, neck, or hip injury
+- [ ] ⚡ Campout: FC 1a (activity count), FC 2a–2e (serve as patrol cook — plan menu, budget, prep and cook breakfast/lunch/dinner, supervise cleanup), FC 3a–3d (discuss when to use lashings; demonstrate timber hitch + clove hitch; tie square, shear, and diagonal lashings; build a useful camp gadget), FC 9c (trash audit)
+- [ ] FC 5b: Identify two ways to obtain a weather forecast for an upcoming activity; explain why forecasts matter
+- [ ] FC 5c–5d: Describe three natural indicators of hazardous weather and appropriate actions; discuss extreme local weather conditions and how to plan and prepare
+- [ ] FC 6e: With a helper and practice victim, show line rescue as both tender and rescuer (~30 feet from shore in deep water) — requires pool or waterfront setting
+- [ ] FC 7a–7c: Demonstrate bandaging for sprained ankle, head, upper arm, and collarbone; show patient transport (smoke-filled room + 25-yard carry); explain heart attack signals and CPR steps
+- [ ] FC 7d–7f: Describe home utility hazards and emergency response; develop home emergency action plan (fire, storm, power outage, water outage); explain how to obtain potable water in an emergency
 - [ ] SC 1a: Verify 5 total activities are complete (including 2 overnight campouts)
 
 **Active Timers:**
@@ -268,8 +277,8 @@ Cooking, Chess, Citizenship in Society
 - [ ] SC 10: Final Scout Spirit reflection with Scoutmaster
 - [ ] SC 11: Scoutmaster Conference for Second Class
 - [ ] SC 12: Board of Review for Second Class — earn Second Class rank! 🎉
-- [ ] FC 7: Tell a new community member about local natural resources
-- [ ] FC 1b: Discuss outdoor impacts; Outdoor Code and Leave No Trace
+- [ ] FC 10: Tell someone eligible to join Scouts BSA (or an inactive Scout) about your activities; invite them to an event; share your efforts with Scoutmaster
+- [ ] FC 1b: Explain potential impacts of camping on the environment and other outdoor users; explain why the Outdoor Code and Leave No Trace are important
 
 **Active Timers:**
 - FC 1a activity count: Ongoing — need 10 total activities by November
@@ -286,9 +295,9 @@ Cooking, Chess, Citizenship in Society
 **Theme:** First Class Final Push
 
 **Checklist of Targeted Requirements:**
-- [ ] FC 4b: Plan and lead a navigation activity for your patrol
+- [ ] FC 4b: Demonstrate GPS/electronic navigation on a campout or hike — find current location, choose a destination, follow the route
 - [ ] FC 9d: Confirm 3 hours of conservation service complete
-- [ ] FC 10: Final Scout Spirit reflection with Scoutmaster
+- [ ] FC 11: Demonstrate Scout Spirit — discuss duty to God and four Scout Law points different from those used for previous ranks
 - [ ] FC 1a: Confirm 10 troop/patrol activities complete (6 outdoor, 3 campouts)
 - [ ] Review all First Class requirements in Scoutbook; identify any gaps
 - [ ] Schedule Scoutmaster Conference for First Class (November target)
@@ -308,8 +317,8 @@ Cooking, Chess, Citizenship in Society
 
 **Checklist of Targeted Requirements:**
 - [ ] FC: Confirm all requirements complete and signed in Scoutbook
-- [ ] FC 11: Scoutmaster Conference for First Class
-- [ ] FC 12: Board of Review for First Class — earn First Class rank! 🎉
+- [ ] FC 12: Scoutmaster Conference for First Class
+- [ ] FC 13: Board of Review for First Class — earn First Class rank! 🎉
 
 **Active Timers:**
 - No active trackers — plan complete ✅
@@ -467,7 +476,7 @@ Cooking, Chess, Citizenship in Society
 **Specific Requirements Targeted:**
 - ⚡ SC 1a: Camping activity count (trip #1 or #2 toward 5 total)
 - ⚡ SC 1c: Select and recommend campsite to patrol leader
-- ⚡ SC 2e: Plan and cook hot breakfast and lunch
+- ⚡ SC 2e: Plan and cook ONE hot breakfast or lunch (MyPlate nutritional model)
 - ⚡ SC 6c: Apply first aid prevention throughout campout
 - ⚡ FC 9c: Track all trash generated; plan to reduce
 - FC 2a–2b: Help plan the menu and budget for this campout
@@ -475,7 +484,7 @@ Cooking, Chess, Citizenship in Society
 **Signature/Action Items:**
 - [ ] SC 1a: Activity logged in Scoutbook
 - [ ] SC 1c: Campsite recommendation made and documented
-- [ ] SC 2e: Hot meals cooked; Scoutmaster sign-off
+- [ ] SC 2e: ONE hot meal cooked; explain food choices and nutrition; Scoutmaster sign-off
 - [ ] SC 6c: First aid prevention demonstrated throughout; sign-off
 - [ ] FC 9c: Trash log kept and reduction plan drafted
 - [ ] FC 8a: Week 3 of 4 physical activity on track

@@ -45,25 +45,11 @@ The CSV lists every rank requirement and merit badge with its completion date. P
    - Target rank
    - Advancement data (Scoutbook CSV, pasted text, or file path)
    - Date of birth (required if target rank is Eagle or Scout is 15+)
-3. The agent reads the BSA requirements file, performs gap analysis, and writes a `.md` plan file to this directory
+3. The agent reads the BSA requirements file, performs gap analysis, and produces two files:
+   - **`[Name]_[Rank]_Plan_[Date].md`** — the full plan in Markdown for quick reference and editing
+   - **`[Name]_[Rank]_Plan_[Date].html`** — a formatted report for the Scout and family to read and print
 
----
-
-## How to Generate the HTML Report
-
-Once the agent has produced a Markdown plan file, run:
-
-```bash
-python3 generate_report.py <plan_file.md>
-```
-
-This produces a single `.html` file alongside the markdown. Open it in any browser. To save as PDF: **File → Print → Save as PDF**.
-
-Example:
-```bash
-python3 generate_report.py Johnny_Scout_Eagle_Plan_20260420.md
-# → Johnny_Scout_Eagle_Plan_20260420.html
-```
+Open the `.html` file in any browser. To save as PDF: **File → Print → Save as PDF**.
 
 ---
 

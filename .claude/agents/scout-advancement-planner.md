@@ -185,8 +185,16 @@ Example: `Jane_Smith_FirstClass_Plan_20250414.md`
 
 Use the Write tool to create the file.
 
-**In your conversation response, do NOT reproduce the full plan.** After writing the file, reply with only:
-- The file path
+**After writing the Markdown file, immediately generate the HTML report** by running:
+```
+python3 /Users/parry/Documents/ScoutAgent/generate_report.py <path_to_md_file>
+```
+
+This produces a `.html` file alongside the `.md` file. Both files are the deliverables — the Markdown for quick reference and editing, the HTML for the Scout and family to read and print.
+
+**In your conversation response, do NOT reproduce the full plan.** After both files are written, reply with only:
+- The Markdown file path
+- The HTML file path
 - 3–5 bullet points: critical blockers, earliest completion date, and the single most urgent action this week
 
 **Tone:** Warm, plain English for the Scout and family. Spell out all acronyms (Merit Badge Counselor, Board of Review, Scoutmaster Conference). Frame remaining work as exciting milestones, not a deficit list.

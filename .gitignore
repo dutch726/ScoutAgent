@@ -1,8 +1,12 @@
 # Scout plan outputs (contain private Scout data)
 *_Plan_*.md
-
-# Generated HTML reports (contain private Scout data)
 *_Plan_*.html
+
+# Allow fictional example files
+!Johnny_Scout_Eagle_Plan_*.md
+!Johnny_Scout_Eagle_Plan_*.html
+!Jane_Scout_FirstClass_Plan_*.md
+!Jane_Scout_FirstClass_Plan_*.html
 
 # BSA requirements PDF (copyrighted)
 *.pdf

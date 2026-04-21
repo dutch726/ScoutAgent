@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EAGLE SCOUT ADVANCEMENT PLAN FOR JOHNNY SCOUT</title>
+  <style>
+  :root {
+    --green:  #1A4D2E;
+    --green2: #2E6B42;
+    --red:    #C8102E;
+    --tan:    #C8A96E;
+    --tan2:   #E8D9B8;
+    --light:  #F5EFE3;
+    --border: #DDD0B8;
+    --text:   #1C2B1A;
+    --muted:  #6B7A62;
+    --white:  #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text);
+    background: var(--light);
+  }
+
+  /* ── Page wrapper ── */
+  .page { max-width: 960px; margin: 0 auto; background: white; box-shadow: 0 2px 24px rgba(0,0,0,.10); }
+
+  /* ── Banner ── */
+  .banner {
+    background: var(--green);
+    color: white;
+    padding: 28px 44px 24px;
+    border-bottom: 5px solid var(--tan);
+  }
+  .banner h1 {
+    font-size: 22px; font-weight: 700; letter-spacing: .4px;
+    margin-bottom: 12px; color: white;
+  }
+  .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px,1fr)); gap: 4px 20px; }
+  .meta-item { font-size: 12.5px; color: rgba(255,255,255,.85); }
+  .meta-item strong { color: var(--tan); font-weight: 600; }
+
+  /* ── Content ── */
+  .content { padding: 28px 44px 52px; }
+
+  /* ── Section wrapper ── */
+  .section { margin-bottom: 36px; }
+  .section-title {
+    font-size: 17px; font-weight: 700; color: var(--green);
+    border-bottom: 2px solid var(--tan);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+
+  /* ── Headings inside sections ── */
+  h1,h2,h3,h4 { font-weight: 700; color: var(--green); margin: 18px 0 8px; }
+  h2 { font-size: 17px; border-bottom: 2px solid var(--tan); padding-bottom: 6px; margin-top: 28px; }
+  h3 { font-size: 14.5px; }
+  h4 { font-size: 13px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); }
+  hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+  p  { margin: 8px 0; }
+
+  /* ── Status spans ── */
+  .st-complete   { color: #1a7f3c; }
+  .st-progress   { color: #b06000; }
+  .st-notstarted { color: var(--muted); }
+  .st-time       { color: #1a5fa8; }
+
+  /* ── Tables ── */
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 12.5px; }
+  thead th {
+    background: var(--green); color: white;
+    text-align: left; padding: 7px 10px;
+    font-size: 11px; text-transform: uppercase; letter-spacing: .4px;
+  }
+  tbody tr:nth-child(even) { background: var(--light); }
+  td { padding: 6px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  td:first-child { font-weight: 500; }
+
+  /* ── Lists ── */
+  ul,ol { margin: 6px 0 6px 20px; }
+  li    { margin: 3px 0; font-size: 13px; }
+  li.checkbox-item { list-style: none; margin-left: -20px; display: flex; gap: 6px; align-items: baseline; }
+  .checkbox { flex-shrink: 0; color: var(--muted); }
+  li.checkbox-item.checked .checkbox { color: #1a7f3c; }
+  li.checkbox-item.checked { color: var(--muted); text-decoration: line-through; }
+
+  code { background: var(--light); border: 1px solid var(--border); border-radius: 3px; padding: 1px 4px; font-size: 12px; }
+  strong { font-weight: 600; }
+
+  /* ── GANTT ── */
+  .gantt { margin: 8px 0 20px; overflow-x: auto; }
+  .gantt-months {
+    display: flex; margin-left: 38%; margin-bottom: 4px;
+  }
+  .gantt-month-label {
+    flex: 1; font-size: 11px; font-weight: 600;
+    color: var(--muted); text-align: center;
+    text-transform: uppercase; letter-spacing: .3px;
+  }
+  .gantt-row { display: flex; align-items: center; margin: 3px 0; min-height: 26px; }
+  .gantt-label {
+    width: 38%; padding-right: 12px; font-size: 12px;
+    color: var(--text); line-height: 1.3; flex-shrink: 0;
+    overflow: hidden; text-overflow: ellipsis;
+  }
+  .gantt-track { flex: 1; position: relative; background: var(--light); height: 22px; border-radius: 4px; border: 1px solid var(--border); }
+  .gantt-bar {
+    position: absolute; top: 2px; height: 18px;
+    border-radius: 3px; display: flex; align-items: center;
+    padding: 0 6px; font-size: 10px; font-weight: 600;
+    color: white; white-space: nowrap; overflow: hidden;
+    min-width: 4px;
+  }
+  .gantt-dividers { display: flex; margin-left: 38%; }
+  .gantt-divider  { flex: 1; border-left: 1px dashed var(--border); height: 100%; }
+
+  /* ── Monthly grid ── */
+  .month-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 8px; }
+  .month-card {
+    border: 1px solid var(--border); border-radius: 8px;
+    overflow: hidden; font-size: 12.5px; break-inside: avoid;
+  }
+  .month-card-header {
+    background: var(--green); color: white;
+    padding: 8px 12px; display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .month-card-header .month-name { font-weight: 700; font-size: 13px; }
+  .month-card-header .month-weeks { font-size: 11px; opacity: .8; }
+  .month-card-theme {
+    background: var(--tan2); color: var(--green);
+    font-size: 11px; font-style: italic; padding: 4px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .month-card-body { padding: 10px 12px; }
+  .month-card-body h3 { display: none; }
+  .month-card-body h4 { font-size: 10.5px; margin: 8px 0 3px; color: var(--muted); }
+  .month-card-body p  { font-size: 12.5px; margin: 4px 0; }
+  .month-card-body ul, .month-card-body ol { margin-left: 16px; }
+  .month-card-body li { font-size: 12px; margin: 2px 0; }
+  .month-card-body li.checkbox-item { margin-left: -16px; }
+  .month-card-body table { font-size: 11px; }
+  .month-card-body thead th { padding: 4px 8px; }
+  .month-card-body td { padding: 4px 8px; }
+  .leader-note { background: var(--light); border-top: 1px solid var(--border); padding: 8px 12px; font-size: 11px; color: var(--muted); }
+  .timer-block { background: #EFF6F2; border-top: 1px solid var(--border); padding: 6px 12px; font-size: 11px; color: var(--green2); }
+
+  /* ── Weekly grid ── */
+  .week-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 4px 0 8px; }
+  .week-card {
+    border: 1px solid var(--border); border-radius: 8px;
+    overflow: hidden; font-size: 12.5px; break-inside: avoid;
+  }
+  .week-card-header {
+    background: var(--green2); color: white;
+    padding: 7px 12px; display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .week-card-header .week-num { font-weight: 700; font-size: 13px; }
+  .week-card-header .week-dates { font-size: 11px; opacity: .8; }
+  .week-card-theme { background: var(--tan2); color: var(--green); font-size: 11px; font-style: italic; padding: 4px 12px; border-bottom: 1px solid var(--border); }
+  .week-card-body { padding: 10px 12px; }
+  .week-card-body h3 { display: none; }
+  .week-card-body h4 { font-size: 10.5px; margin: 7px 0 3px; color: var(--muted); }
+  .week-card-body p  { font-size: 12px; margin: 3px 0; }
+  .week-card-body ul, .week-card-body ol { margin-left: 16px; }
+  .week-card-body li { font-size: 12px; margin: 2px 0; }
+  .week-card-body li.checkbox-item { margin-left: -16px; }
+  .week-focus { background: #EFF6F2; border-top: 1px solid var(--border); padding: 6px 12px; font-size: 11.5px; color: var(--green2); font-style: italic; }
+
+  /* ── Action items ── */
+  .action-box {
+    background: var(--green); color: white; border-radius: 8px;
+    padding: 18px 22px; margin: 4px 0;
+  }
+  .action-box h3 { color: var(--tan); font-size: 13px; margin: 12px 0 4px; }
+  .action-box h3:first-child { margin-top: 0; }
+  .action-box li { font-size: 13px; color: rgba(255,255,255,.9); margin: 4px 0; }
+  .action-box li.checkbox-item .checkbox { color: var(--tan); }
+  .action-box p  { font-size: 13px; color: rgba(255,255,255,.9); }
+
+  /* ── Notes ── */
+  .notes-box { background: var(--light); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 4px 0; }
+  .notes-box li { font-size: 13px; margin: 4px 0; }
+
+  /* ── Footer ── */
+  .footer {
+    background: var(--green); color: rgba(255,255,255,.5);
+    font-size: 11.5px; text-align: center; padding: 12px;
+    border-top: 3px solid var(--tan);
+  }
+
+  /* ── Print ── */
+  @media print {
+    body { background: white; font-size: 11px; }
+    .page { box-shadow: none; max-width: 100%; }
+    .banner, thead th, .month-card-header, .week-card-header, .action-box, .footer {
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    .month-grid, .week-grid { grid-template-columns: 1fr 1fr; }
+    .month-card, .week-card { break-inside: avoid; }
+    h2 { page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="banner">
+    <h1>EAGLE SCOUT ADVANCEMENT PLAN FOR JOHNNY SCOUT</h1>
+    <div class="meta-grid"><div class="meta-item"><strong>Scout Name:</strong> Johnny Scout</div><div class="meta-item"><strong>Current Rank:</strong> Life Scout (earned 08/15/2025)</div><div class="meta-item"><strong>Target Rank:</strong> Eagle Scout</div><div class="meta-item"><strong>Troop:</strong> 1</div><div class="meta-item"><strong>Plan Start Date:</strong> April 20, 2026</div><div class="meta-item"><strong>Projected Completion Date:</strong> September 2026</div><div class="meta-item"><strong>Time Remaining:</strong> 6 months, 0 days — ⚠️ TIME-CRITICAL PLAN</div><div class="meta-item"><strong>Eagle Scout Deadline (18th Birthday):</strong> October 20, 2026</div></div>
+  </div>
+  <div class="content">
+    <div class="section"><div class="section-title">ACHIEVEMENTS & CELEBRATION</div><div class="section-content"><p>Johnny has worked hard to reach Life Scout and stands just four merit badges and one Eagle project away from the highest rank in Scouting. He has already completed 17 merit badges — including some of the toughest Eagle-required badges like Lifesaving, Cooking, Camping, and all three Citizenship badges — and has served as Patrol Leader for seven months. That is real leadership, and it shows. The finish line is in sight. This plan is aggressive by necessity, but every single requirement is reachable before October 20.</p>
+<p><strong>Rank Progression</strong></p>
+<ul><li>Scout (06/10/2021)</li><li>Tenderfoot (09/12/2021)</li><li>Second Class (03/07/2022)</li><li>First Class (11/14/2022)</li><li>Star (05/20/2023)</li><li>Life (08/15/2025)</li></ul>
+<p><strong>Leadership</strong></p>
+<ul><li>Patrol Leader (Troop 1): September 2025 – present (7+ months) <span class="st st-complete">✅</span> Satisfies Eagle Req. 4</li></ul>
+<p><strong>Merit Badges Completed (17 total)</strong>First Aid, Citizenship in the Community — wait, see below. Completed: Citizenship in the Nation, Citizenship in Society, Citizenship in the World, Environmental Science, Lifesaving, Swimming, Camping, Cooking, First Aid, Personal Fitness, Hiking, Emergency Preparedness, Archery, Chess, and Fingerprinting (2 electives beyond minimum).</p>
+<hr></div></div><div class="section"><div class="section-title">EAGLE SCOUT REQUIREMENTS — FULL STATUS</div><div class="section-content"><table><thead><tr><th>#</th><th>Requirement</th><th>Status</th><th>Notes</th></tr></thead><tbody><tr><td>1</td><td>Active 6+ months as Life Scout</td><td><span class="st st-complete">✅</span> Complete</td><td>Life earned 08/15/2025; 8 months active</td></tr><tr><td>2</td><td>Demonstrate Scout Spirit</td><td><span class="st st-time">⏱️</span> Time-Dependent</td><td>Assessed at Board of Review — no action needed now</td></tr><tr><td>3a</td><td>14 Eagle-required merit badges</td><td><span class="st st-progress">🔄</span> In-Progress</td><td>10 of 14 complete; 4 remaining (see below)</td></tr><tr><td>3b</td><td>7 optional merit badges (21 total)</td><td><span class="st st-complete">✅</span> Complete</td><td>Has 17 total; 7+ electives satisfied</td></tr><tr><td>4</td><td>Position of Responsibility (6 months post-Life)</td><td><span class="st st-complete">✅</span> Complete</td><td>Patrol Leader since 09/2025; 6 months reached 02/2026</td></tr><tr><td>5</td><td>Eagle Scout Service Project</td><td><span class="st st-progress">🔄</span> In-Progress</td><td>Concept approved verbally; written proposal not yet submitted</td></tr><tr><td>6</td><td>Statement of ambitions and life purpose</td><td><span class="st st-notstarted">⬜</span> Not Started</td><td>One-page essay; complete with Scoutmaster</td></tr><tr><td>7</td><td>Six references (parent, adult, teacher, employer/school, religious, peer)</td><td><span class="st st-notstarted">⬜</span> Not Started</td><td>Request letters by July 1</td></tr><tr><td>8</td><td>Scoutmaster Conference</td><td><span class="st st-notstarted">⬜</span> Not Started</td><td>Schedule after all requirements complete (target: September 1)</td></tr><tr><td>9</td><td>Board of Review</td><td><span class="st st-notstarted">⬜</span> Not Started</td><td>Schedule after Scoutmaster Conference (target: September 15)</td></tr></tbody></table>
+<p><strong>4 Remaining Eagle-Required Merit Badges:</strong></p>
+<table><thead><tr><th>Badge</th><th>Status</th><th>Critical Constraint</th></tr></thead><tbody><tr><td>Family Life</td><td><span class="st st-progress">🔄</span> In-Progress</td><td>Req. 3 requires 90 consecutive days of home chores — <strong>start immediately</strong></td></tr><tr><td>Personal Management</td><td><span class="st st-progress">🔄</span> In-Progress</td><td>Req. 2c requires 13 weeks of budget tracking — <strong>start immediately</strong></td></tr><tr><td>Communication</td><td><span class="st st-progress">🔄</span> In-Progress</td><td>Most requirements not yet started; no time-lock except scheduling</td></tr><tr><td>Citizenship in the Community</td><td><span class="st st-notstarted">⬜</span> Not Started</td><td>Requires 8-hour volunteer stint and one public meeting attendance</td></tr></tbody></table>
+<hr></div></div><div class="section"><div class="section-title">TIME-SENSITIVE COUNTDOWN</div><div class="gantt"><div class="gantt-months" style="margin-left:38%;"><div class="gantt-month-label" style="width:20.0%">Apr</div><div class="gantt-month-label" style="width:20.0%">May</div><div class="gantt-month-label" style="width:20.0%">Jun</div><div class="gantt-month-label" style="width:20.0%">Jul</div><div class="gantt-month-label" style="width:20.0%">Aug</div></div><div class="gantt-row"><div class="gantt-label" title="Family Life Req. 3: 90-day home chores">Family Life Req. 3: 90-day home chores</div><div class="gantt-track"><div class="gantt-bar" style="left:0.0%;width:100.0%;background:#1A4D2E;"></div></div></div><div class="gantt-row"><div class="gantt-label" title="Personal Management Req. 2c: 13-week budget">Personal Management Req. 2c: 13-week bud…</div><div class="gantt-track"><div class="gantt-bar" style="left:0.0%;width:100.0%;background:#2E6B42;"></div></div></div><div class="gantt-row"><div class="gantt-label" title="Eagle Project: proposal, approval, execution, writeup">Eagle Project: proposal, approval, execu…</div><div class="gantt-track"><div class="gantt-bar" style="left:25.0%;width:75.0%;background:#C8102E;"></div></div></div><div class="gantt-row"><div class="gantt-label" title="Citizenship in Community Req. 7: 8-hour volunteer">Citizenship in Community Req. 7: 8-hour …</div><div class="gantt-track"><div class="gantt-bar" style="left:25.0%;width:50.0%;background:#7A5C1E;"></div></div></div></div></div><div class="section"><div class="section-title">MONTH-BY-MONTH PLAN</div><div class="month-grid"><div class="month-card"><div class="month-card-header"><span class="month-name">APRIL 2026</span><span class="month-weeks">Weeks 1–2</span></div><div class="month-card-theme">Launch Time-Critical Trackers Immediately</div><div class="month-card-body"><p><strong>Checklist of Targeted Requirements:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>⚡ Family Life 3: Begin 90-day home chore log TODAY (April 20) — 5+ chores daily</li><li class="checkbox-item "><span class="checkbox">☐</span>⚡ Personal Management 2a–2d: Begin 13-week budget tracking TODAY (April 20)</li><li class="checkbox-item "><span class="checkbox">☐</span>Personal Management 1a–1c: Choose a major purchase goal; develop savings plan</li><li class="checkbox-item "><span class="checkbox">☐</span>Family Life 1: Define family; discuss importance with parents and counselor</li><li class="checkbox-item "><span class="checkbox">☐</span>Family Life 2: List why you matter to your family; discuss with parents</li><li class="checkbox-item "><span class="checkbox">☐</span>Eagle Project: Finalize proposal document; meet with Scoutmaster by April 28</li><li class="checkbox-item "><span class="checkbox">☐</span>Citizenship in Community: Identify Merit Badge Counselor; map community services (Req. 1, 2a, 2b)</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication: Identify counselor; begin Req. 1 (log or journal)</li><li class="checkbox-item "><span class="checkbox">☐</span>Request six Eagle reference letters (parent, adult, teacher, school/employer, religious, peer)</li></ul></div><div class="timer-block">⏱ <p><strong>Active Timers:</strong></p>
+<ul><li>Family Life 90-day chores: Days 1–11 (April 20–30)</li><li>Personal Management 13-week budget: Week 1 (April 20–26)</li></ul></div><div class="leader-note">👤 <p><strong>Leader Actions Needed:</strong></p>
+<ul><li>Scoutmaster: Review Eagle project proposal by April 28; confirm POR documentation</li><li>Parents: Establish home chore list (5+ chores); begin daily tracking log with Johnny</li><li>Merit Badge Counselors: Identify and contact counselors for all 4 remaining badges</li></ul>
+<hr></div></div><div class="month-card"><div class="month-card-header"><span class="month-name">MAY 2026</span><span class="month-weeks">Weeks 3–6</span></div><div class="month-card-theme">Eagle Project Approval + Citizenship Badge Push</div><div class="month-card-body"><p><strong>Checklist of Targeted Requirements:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>Eagle Project: Submit final proposal; obtain Scoutmaster, committee, and council approval by May 15</li><li class="checkbox-item "><span class="checkbox">☐</span>Eagle Project: Begin recruiting volunteers; purchase or acquire materials by May 31</li><li class="checkbox-item "><span class="checkbox">☐</span>⚡ Citizenship in Community 3a + Communication 5: Attend one public meeting (city council or school board) — covers both badges</li><li class="checkbox-item "><span class="checkbox">☐</span>⚡ Citizenship in Community 4a–4c + Communication 4: Interview a local official — covers both badges</li><li class="checkbox-item "><span class="checkbox">☐</span>Citizenship in Community 1: Discuss citizenship rights and duties with counselor</li><li class="checkbox-item "><span class="checkbox">☐</span>Citizenship in Community 2a–2b: Map community services; chart local government</li><li class="checkbox-item "><span class="checkbox">☐</span>Citizenship in Community 5: Watch approved movie; discuss community impact</li><li class="checkbox-item "><span class="checkbox">☐</span>Citizenship in Community 6: List taxpayer-funded services; discuss importance</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 1: Complete log, journal, or discussion requirement</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 2: Create self-description project; present to counselor</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 8: Select and read approved book; write 200-word report</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 9: Research three communication careers; discuss with counselor</li><li class="checkbox-item "><span class="checkbox">☐</span>Family Life 4: Plan and carry out individual home project</li><li class="checkbox-item "><span class="checkbox">☐</span>Statement of ambitions and life purpose: Draft essay; review with Scoutmaster</li></ul></div><div class="timer-block">⏱ <p><strong>Active Timers:</strong></p>
+<ul><li>Family Life 90-day chores: Days 12–41 (May 1–31)</li><li>Personal Management 13-week budget: Weeks 2–5 (April 27–May 24)</li><li>Eagle Project: Approval phase (complete by May 15)</li></ul></div><div class="leader-note">👤 <p><strong>Leader Actions Needed:</strong></p>
+<ul><li>Council: Approve Eagle project by May 15</li><li>Parents: Support family project planning (Family Life 5); participate in family meeting (Family Life 6a–6b)</li><li>Counselors: Schedule meetings for Communication and Citizenship in Community</li></ul>
+<hr></div></div><div class="month-card"><div class="month-card-header"><span class="month-name">JUNE 2026</span><span class="month-weeks">Weeks 7–10</span></div><div class="month-card-theme">Eagle Project Execution + Finish Citizenship & Communication</div><div class="month-card-body"><p><strong>Checklist of Targeted Requirements:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>Eagle Project: Execute project with volunteers (target 2–3 weekends in June)</li><li class="checkbox-item "><span class="checkbox">☐</span>⚡ Citizenship in Community 7a–7c: Volunteer 8+ hours at chosen charity (can overlap with Eagle project if beneficiary qualifies)</li><li class="checkbox-item "><span class="checkbox">☐</span>Citizenship in Community 8: Develop and present community presentation (slideshow, speech, or video)</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 3: Deliver 5-minute speech at troop meeting</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 6: Teach a skill or concept at troop meeting using prepared aids</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 7: Complete 8-hour service project (may overlap with Eagle project service hours)</li><li class="checkbox-item "><span class="checkbox">☐</span>Family Life 5: Plan and carry out family project with parents</li><li class="checkbox-item "><span class="checkbox">☐</span>Family Life 6a–6b: Hold family meeting(s) using prepared agenda</li><li class="checkbox-item "><span class="checkbox">☐</span>Family Life 7: Discuss parenting responsibilities with counselor</li><li class="checkbox-item "><span class="checkbox">☐</span>Personal Management 3–8: Complete all non-time-locked requirements (discussions, visit to financial institution, pay stub review, scheduling exercise)</li></ul></div><div class="timer-block">⏱ <p><strong>Active Timers:</strong></p>
+<ul><li>Family Life 90-day chores: Days 42–71 (June 1–30)</li><li>Personal Management 13-week budget: Weeks 6–10 (May 25–June 28)</li><li>Eagle Project: Execution phase</li></ul></div><div class="leader-note">👤 <p><strong>Leader Actions Needed:</strong></p>
+<ul><li>Scoutmaster: Attend or check in on Eagle project execution; document leadership observations</li><li>Parents: Participate in family meetings and family project (Family Life 5–6)</li><li>Counselors: Sign off on Citizenship in Community and Communication by June 30</li></ul>
+<hr></div></div><div class="month-card"><div class="month-card-header"><span class="month-name">JULY 2026</span><span class="month-weeks">Weeks 11–14</span></div><div class="month-card-theme">Close Out All Merit Badges; Eagle Project Writeup</div><div class="month-card-body"><p><strong>Checklist of Targeted Requirements:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>Eagle Project: Complete writeup; submit to Scoutmaster by July 25</li><li class="checkbox-item "><span class="checkbox">☐</span>Family Life: Final counselor review and sign-off (after July 19 — Day 90)</li><li class="checkbox-item "><span class="checkbox">☐</span>Personal Management: Final counselor review and sign-off (after July 20 — Week 13)</li><li class="checkbox-item "><span class="checkbox">☐</span>All merit badge final sign-offs: Confirm all four badges fully complete in Scoutbook by July 31</li><li class="checkbox-item "><span class="checkbox">☐</span>Statement of ambitions essay: Finalize and submit</li><li class="checkbox-item "><span class="checkbox">☐</span>Confirm all six Eagle references submitted to council</li></ul></div><div class="timer-block">⏱ <p><strong>Active Timers:</strong></p>
+<ul><li>Family Life 90-day chores: Days 72–90 → <strong>complete July 19</strong> <span class="st st-complete">✅</span></li><li>Personal Management 13-week budget: Weeks 11–13 → <strong>complete July 20</strong> <span class="st st-complete">✅</span></li><li>Eagle Project writeup: Due July 25</li></ul></div><div class="leader-note">👤 <p><strong>Leader Actions Needed:</strong></p>
+<ul><li>Scoutmaster: Review and approve Eagle project writeup by July 25</li><li>Parents: Final review of chore log and budget tracker; co-sign with Johnny</li><li>Counselors: Final sign-off meetings for Family Life and Personal Management by July 31</li></ul>
+<hr></div></div><div class="month-card"><div class="month-card-header"><span class="month-name">AUGUST 2026</span><span class="month-weeks">Weeks 15–18</span></div><div class="month-card-theme">Final Review + Scoutmaster Conference Prep</div><div class="month-card-body"><p><strong>Checklist of Targeted Requirements:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>Verify all 21 merit badges are recorded in Scoutbook</li><li class="checkbox-item "><span class="checkbox">☐</span>Verify Eagle project workbook is complete and submitted</li><li class="checkbox-item "><span class="checkbox">☐</span>Verify all six reference letters received by council</li><li class="checkbox-item "><span class="checkbox">☐</span>Review Scout Oath, Scout Law, and life purpose essay with Scoutmaster</li><li class="checkbox-item "><span class="checkbox">☐</span>Scoutmaster Conference: Schedule and complete by September 1</li><li class="checkbox-item "><span class="checkbox">☐</span>Submit Eagle Board of Review request to council</li></ul></div><div class="timer-block">⏱ <p><strong>Active Timers:</strong></p>
+<ul><li>No active time-based trackers — all clocks complete <span class="st st-complete">✅</span></li></ul></div><div class="leader-note">👤 <p><strong>Leader Actions Needed:</strong></p>
+<ul><li>Scoutmaster: Conduct Scoutmaster Conference; submit Eagle application to council</li><li>Council: Process Eagle application; schedule Board of Review</li></ul>
+<hr></div></div><div class="month-card"><div class="month-card-header"><span class="month-name">SEPTEMBER 2026</span><span class="month-weeks">Weeks 19–22</span></div><div class="month-card-theme">Board of Review + Eagle Court of Honor Planning</div><div class="month-card-body"><p><strong>Checklist of Targeted Requirements:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>Board of Review: Complete by September 15</li><li class="checkbox-item "><span class="checkbox">☐</span>Eagle Court of Honor: Plan and schedule (typically 4–6 weeks after Board of Review)</li><li class="checkbox-item "><span class="checkbox">☐</span>Eagle Scout medal, certificate, and patch ordered</li></ul></div><div class="timer-block">⏱ <p><strong>Active Timers:</strong></p>
+<ul><li>Eagle Deadline: October 20, 2026 — <strong>35 days after target Board of Review</strong> <span class="st st-complete">✅</span></li></ul></div><div class="leader-note">👤 <p><strong>Leader Actions Needed:</strong></p>
+<ul><li>Council: Conduct Board of Review; issue Eagle certification</li><li>Troop committee: Help plan Eagle Court of Honor</li><li>Family: Plan celebration!</li></ul>
+<hr></div></div></div></div><div class="section"><div class="section-title">WEEK-BY-WEEK DETAIL (WEEKS 1–8)</div><div class="week-grid"><div class="week-card"><div class="week-card-header"><span class="week-num">Week 1</span><span class="week-dates">April 20–26, 2026</span></div><div class="week-card-theme">Launch Day — Start the Clocks</div><div class="week-card-body"><p><strong>Specific Requirements Targeted:</strong></p>
+<ul><li>Family Life 3: Begin 90-day chore log (Day 1 of 90)</li><li>Personal Management 2a: Prepare budget; begin 13-week tracking (Week 1 of 13)</li><li>Family Life 1–2: Discuss family importance with parents</li><li>Eagle Project: Finalize proposal document</li></ul>
+<p><strong>Signature/Action Items:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>90-day chore log started and dated April 20</li><li class="checkbox-item "><span class="checkbox">☐</span>13-week budget spreadsheet or notebook started and dated April 20</li><li class="checkbox-item "><span class="checkbox">☐</span>Chore list (5+ chores) agreed upon with parents</li><li class="checkbox-item "><span class="checkbox">☐</span>Eagle project proposal draft complete</li><li class="checkbox-item "><span class="checkbox">☐</span>Merit Badge Counselors identified for all 4 remaining badges</li></ul>
+<hr></div><div class="week-focus">The 90-day and 13-week clocks start TODAY. Nothing else matters more this week — get both trackers started before the day is over.</div></div><div class="week-card"><div class="week-card-header"><span class="week-num">Week 2</span><span class="week-dates">April 27–May 3, 2026</span></div><div class="week-card-theme">Counselor Kickoff Meetings</div><div class="week-card-body"><p><strong>Specific Requirements Targeted:</strong></p>
+<ul><li>Communication 1: Begin log or journal</li><li>Citizenship in Community 1: Discuss citizenship with counselor</li><li>Citizenship in Community 2a–2b: Map community services; chart local government</li><li>Eagle Project: Submit proposal to Scoutmaster for review</li></ul>
+<p><strong>Signature/Action Items:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>Communication counselor: Initial meeting; agree on pathway for all 9 requirements</li><li class="checkbox-item "><span class="checkbox">☐</span>Citizenship in Community counselor: Complete Req. 1, 2a, 2b at first meeting</li><li class="checkbox-item "><span class="checkbox">☐</span>Family Life counselor: Confirm chore log format; schedule June meeting for Reqs. 1–2</li><li class="checkbox-item "><span class="checkbox">☐</span>Personal Management counselor: Review budget format; confirm 13-week tracking method</li><li class="checkbox-item "><span class="checkbox">☐</span>Eagle project proposal submitted to Scoutmaster</li></ul>
+<hr></div><div class="week-focus">Get all four counselor relationships started so May is productive across every badge simultaneously.</div></div><div class="week-card"><div class="week-card-header"><span class="week-num">Week 3</span><span class="week-dates">May 4–10, 2026</span></div><div class="week-card-theme">Public Meeting + Dual Badge Synergy</div><div class="week-card-body"><p><strong>Specific Requirements Targeted:</strong></p>
+<ul><li>⚡ Communication 5 + Citizenship in Community 3a–3b: Attend one public meeting</li><li>Communication 8: Begin reading approved book</li><li>Communication 9: Research three communication careers</li><li>Eagle project: Address any Scoutmaster feedback on proposal</li></ul>
+<p><strong>Signature/Action Items:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>Public meeting attended; notes taken (date/location: ___________________)</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 5 confirmed with counselor</li><li class="checkbox-item "><span class="checkbox">☐</span>Citizenship in Community 3a–3b confirmed with counselor</li><li class="checkbox-item "><span class="checkbox">☐</span>Book selected for Communication 8</li><li class="checkbox-item "><span class="checkbox">☐</span>Eagle project: Scoutmaster feedback addressed</li></ul>
+<hr></div><div class="week-focus">One public meeting attendance simultaneously completes Communication 5 and Citizenship 3a–3b — the highest-synergy activity in the plan.</div></div><div class="week-card"><div class="week-card-header"><span class="week-num">Week 4</span><span class="week-dates">May 11–17, 2026</span></div><div class="week-card-theme">Eagle Project Council Approval</div><div class="week-card-body"><p><strong>Specific Requirements Targeted:</strong></p>
+<ul><li>Eagle project: Obtain council approval (target May 15)</li><li>⚡ Communication 4 + Citizenship in Community 4a–4c: Interview local official</li><li>Citizenship in Community 5: Watch approved movie; discuss with counselor</li><li>Citizenship in Community 6: List and discuss community services</li></ul>
+<p><strong>Signature/Action Items:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>Eagle project: Council approval received and documented</li><li class="checkbox-item "><span class="checkbox">☐</span>Official interview conducted and notes written (name/title: ___________________)</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 4 confirmed with counselor</li><li class="checkbox-item "><span class="checkbox">☐</span>Citizenship 4a–4c confirmed with counselor</li><li class="checkbox-item "><span class="checkbox">☐</span>Approved movie watched and discussed</li></ul>
+<hr></div><div class="week-focus">Council approval of the Eagle project unlocks execution. Everything this month builds toward a June project kickoff.</div></div><div class="week-card"><div class="week-card-header"><span class="week-num">Week 5</span><span class="week-dates">May 18–24, 2026</span></div><div class="week-card-theme">Finish Citizenship Badge</div><div class="week-card-body"><p><strong>Specific Requirements Targeted:</strong></p>
+<ul><li>Citizenship in Community 7a–7c: Begin 8-hour volunteer work at chosen charity</li><li>Communication 1: Complete log or discussion activity</li><li>Communication 2: Create and present self-description project</li><li>Family Life 4: Execute individual home improvement project</li></ul>
+<p><strong>Signature/Action Items:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>Charity selected; volunteer hours started (organization: ___________________)</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 1 signed off by counselor</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 2 project presented to counselor</li><li class="checkbox-item "><span class="checkbox">☐</span>Family Life 4 project completed and discussed with counselor</li></ul>
+<hr></div><div class="week-focus">8 hours of volunteering can happen over 2–3 evenings or one weekend — schedule it this week, don't let it drift into June.</div></div><div class="week-card"><div class="week-card-header"><span class="week-num">Week 6</span><span class="week-dates">May 25–31, 2026</span></div><div class="week-card-theme">Citizenship Badge Completion + Communication Midpoint</div><div class="week-card-body"><p><strong>Specific Requirements Targeted:</strong></p>
+<ul><li>Citizenship in Community 7a–7c: Complete 8 volunteer hours; discuss with counselor</li><li>Citizenship in Community 8: Deliver community presentation</li><li>Communication 8: Complete book report (200 words)</li><li>Communication 9: Discuss three communication careers with counselor</li></ul>
+<p><strong>Signature/Action Items:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>8 volunteer hours complete and documented</li><li class="checkbox-item "><span class="checkbox">☐</span>Community presentation delivered (format: ___________________)</li><li class="checkbox-item "><span class="checkbox">☐</span>Citizenship in Community badge fully signed off <span class="st st-complete">✅</span></li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 8 report submitted to counselor</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication 9 discussion complete</li></ul>
+<hr></div><div class="week-focus">Completing Citizenship in Community this week keeps the schedule intact. It's the badge with the most external dependencies (volunteer hours, public meeting) — finish it first.</div></div><div class="week-card"><div class="week-card-header"><span class="week-num">Week 7</span><span class="week-dates">June 1–7, 2026</span></div><div class="week-card-theme">Communication Badge Completion + Eagle Project Execution Begins</div><div class="week-card-body"><p><strong>Specific Requirements Targeted:</strong></p>
+<ul><li>Communication 3: Deliver 5-minute speech at troop meeting</li><li>Communication 6: Teach a skill at troop meeting</li><li>Eagle project: First work session with volunteers</li></ul>
+<p><strong>Signature/Action Items:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>5-minute speech delivered at troop meeting; counselor present</li><li class="checkbox-item "><span class="checkbox">☐</span>Teaching demonstration completed; teaching aids prepared in advance</li><li class="checkbox-item "><span class="checkbox">☐</span>Eagle project: First volunteer work session held (date: ___________________)</li><li class="checkbox-item "><span class="checkbox">☐</span>Communication badge fully signed off <span class="st st-complete">✅</span></li></ul>
+<hr></div><div class="week-focus">With Citizenship done last week and Communication wrapping this week, two of the four remaining badges are complete by the end of Week 7.</div></div><div class="week-card"><div class="week-card-header"><span class="week-num">Week 8</span><span class="week-dates">June 8–14, 2026</span></div><div class="week-card-theme">Eagle Project Second Work Session + Family Life Progress</div><div class="week-card-body"><p><strong>Specific Requirements Targeted:</strong></p>
+<ul><li>Eagle project: Second volunteer work session</li><li>Family Life 5: Plan and begin family project</li><li>Family Life 6a–6b: Hold first family meeting with prepared agenda</li><li>Personal Management 5: Visit a financial institution</li></ul>
+<p><strong>Signature/Action Items:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>Eagle project: Second work session held; document hours and volunteer names</li><li class="checkbox-item "><span class="checkbox">☐</span>Family project started; goal documented with parents</li><li class="checkbox-item "><span class="checkbox">☐</span>Family meeting #1 held with written agenda</li><li class="checkbox-item "><span class="checkbox">☐</span>Financial institution visit complete; discuss accounts and services with counselor</li></ul>
+<hr></div><div class="week-focus">Eagle project work sessions must stay on schedule — two weekends in June keeps the July writeup target realistic.</div></div></div></div><div class="section"><div class="section-title">IN-PROGRESS MERIT BADGE DETAIL</div><div class="section-content"><h3>Family Life Merit Badge (2019 Version)</h3>
+<table><thead><tr><th>Req</th><th>What It Asks</th><th>Status</th></tr></thead><tbody><tr><td>1</td><td>Define family; discuss why families matter and how actions affect members</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>2</td><td>List reasons you are important to your family; discuss with parents and counselor</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>3</td><td>List 5+ home duties; perform them for 90 consecutive days; keep a record; discuss with counselor</td><td><span class="st st-time">⏱️</span> <strong>90 DAYS — start April 20</strong></td></tr><tr><td>4</td><td>Plan and carry out an individual home project; discuss goal and results</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>5</td><td>Plan and carry out a family project; discuss participation and results</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>6a–6b</td><td>Learn to run a family meeting; prepare agenda with topics 1–7; hold meeting(s)</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>7</td><td>Discuss effective parenting and parent responsibilities with counselor</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr></tbody></table>
+<p><strong>Earliest completion: July 19, 2026 (if 90-day tracking starts April 20)</strong></p>
+<h3>Personal Management Merit Badge (2025 Version)</h3>
+<table><thead><tr><th>Req</th><th>What It Asks</th><th>Status</th></tr></thead><tbody><tr><td>1a–1c</td><td>Choose a major purchase; develop savings and comparison-shopping plans</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>2a–2d</td><td>Prepare a 13-week budget; track actual income and expenses; compare and discuss</td><td><span class="st st-time">⏱️</span> <strong>13 WEEKS — start April 20</strong></td></tr><tr><td>3</td><td>Discuss the dangers of debt; explain interest and wise credit use</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>4</td><td>Discuss investing basics (stocks, bonds, mutual funds) with counselor</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>5</td><td>Visit a financial institution; learn about accounts and services</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>6</td><td>Discuss the importance of a will and other estate planning tools</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>7</td><td>Review and discuss a pay stub; understand deductions</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>8</td><td>Demonstrate time-management skills by preparing a daily schedule for one week</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr></tbody></table>
+<p><strong>Earliest completion: July 20, 2026 (if 13-week tracking starts April 20)</strong></p>
+<h3>Communication Merit Badge (2014 Version)</h3>
+<table><thead><tr><th>Req</th><th>What It Asks</th><th>Status</th></tr></thead><tbody><tr><td>1</td><td>Choose one: maintain a log, keep a journal, conduct group discussion, or list methods</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>2</td><td>Create a self-description (collage, story, drawing, photos, song, or skit); present to counselor</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>3</td><td>Write and deliver a 5-minute speech at a troop meeting or public gathering</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>4</td><td>Interview a community leader; write a 5-minute introduction as guest speaker</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>5</td><td>Attend a public meeting; take notes; prepare an objective report</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>6</td><td>Teach a skill or concept using prepared teaching aids</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>7</td><td>Plan and participate in a Scoutmaster-approved service project (8+ hours)</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>8</td><td>Select and read a book approved by counselor; write a 200-word report</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>9</td><td>Research three communication careers; discuss with counselor</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr></tbody></table>
+<p><strong>Earliest completion: June 15, 2026 (no time-lock; scheduling only)</strong></p>
+<h3>Citizenship in the Community Merit Badge (2024 Version)</h3>
+<table><thead><tr><th>Req</th><th>What It Asks</th><th>Status</th></tr></thead><tbody><tr><td>1</td><td>Discuss good citizenship; rights, duties, and obligations in a community</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>2a</td><td>Map community services and landmarks; record distances and travel times</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>2b</td><td>Chart local and state government organization</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>3a</td><td>Attend an in-person public meeting (city council, school board, court, etc.)</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>3b</td><td>Choose one debated issue from the meeting; explain your position to counselor</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>4a–4c</td><td>Identify a community issue; find responsible government branch; interview official; share findings</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>5</td><td>Watch an approved movie showing positive community impact; discuss with counselor</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>6</td><td>List taxpayer-funded community services; explain their importance</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>7a–7c</td><td>Identify three charities; choose one; research it; volunteer 8+ hours; discuss experience</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr><tr><td>8</td><td>Develop and present a public presentation about the community</td><td><span class="st st-notstarted">⬜</span> Not started</td></tr></tbody></table>
+<p><strong>Earliest completion: June 30, 2026 (requires 8-hour volunteer block and one public meeting)</strong></p>
+<hr></div></div><div class="section"><div class="section-title">THIS WEEK'S ACTION ITEMS (Week of April 20, 2026)</div><div class="action-box"><p>⚠️ This plan has a hard deadline. Every day of delay on the time-based requirements directly risks missing the October 20 Eagle deadline.</p>
+<p><strong>Immediate actions — do these today:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>⚡ Start the 90-day Family Life chore log TODAY — date it April 20 and list 5+ chores</li><li class="checkbox-item "><span class="checkbox">☐</span>⚡ Start the 13-week Personal Management budget tracker TODAY — record this week's income and planned expenses</li></ul>
+<p><strong>This week:</strong></p>
+<ul><li class="checkbox-item "><span class="checkbox">☐</span>Contact Merit Badge Counselors for all four remaining badges</li><li class="checkbox-item "><span class="checkbox">☐</span>Finalize Eagle project proposal document for Scoutmaster review</li><li class="checkbox-item "><span class="checkbox">☐</span>Request all six Eagle reference letters from your references</li></ul>
+<p><strong>One sentence:</strong> Start both time-based trackers today — that single action is the difference between making it to Eagle before October 20 and not.</p></div></div><div class="section"><div class="section-title">⚡ SYNERGY MAP</div><div class="section-content"><table><thead><tr><th>Activity</th><th>Requirements Fulfilled</th><th>Notes</th></tr></thead><tbody><tr><td>Attend city council or school board meeting</td><td>Communication 5 + Citizenship in Community 3a–3b</td><td>One attendance covers both badges</td></tr><tr><td>Interview local elected official or city employee</td><td>Communication 4 + Citizenship in Community 4a–4c</td><td>One interview, two badges</td></tr><tr><td>Eagle project service hours</td><td>Citizenship in Community 7a–7c (if same org)</td><td>Coordinate project beneficiary with charity volunteer requirement</td></tr><tr><td>Teach a skill at troop meeting</td><td>Communication 6</td><td>Also demonstrates leadership for Eagle Spirit req.</td></tr><tr><td>Family Life family meeting</td><td>Family Life 6a–6b</td><td>Can combine with Personal Management family discussion</td></tr></tbody></table>
+<hr></div></div>
+  </div>
+  <div class="footer">
+    Generated April 20, 2026 from Johnny_Scout_Eagle_Plan_20260420.md &nbsp;·&nbsp; File → Print → Save as PDF
+  </div>
+</div>
+</body>
+</html>

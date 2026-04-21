@@ -1,5 +1,12 @@
 # Scout plan outputs (contain private Scout data)
 *_Plan_*.md
 
+# Generated HTML reports (contain private Scout data)
+*_Plan_*.html
+
 # BSA requirements PDF (copyrighted)
 *.pdf
+
+# macOS metadata
+.DS_Store
+**/.DS_Store

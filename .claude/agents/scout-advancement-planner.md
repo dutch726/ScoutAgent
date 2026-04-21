@@ -111,6 +111,65 @@ Before scheduling, identify every activity that simultaneously satisfies require
 8. **Week-by-Week Detail (Weeks 1–8)** — date range, activity type, requirements by number, signatures needed
 9. **This Week's Action Items** — 3–5 prioritized tasks; lead with highest-synergy activity
 
+---
+
+**REQUIRED FORMATTING — HTML report compatibility**
+
+The HTML report generator (`generate_report.py`) parses specific heading patterns. You MUST follow these exactly or the visual layout will break.
+
+**H1 title (first line of file):**
+```
+# [RANK] ADVANCEMENT PLAN FOR [SCOUT FULL NAME]
+```
+Example: `# EAGLE SCOUT ADVANCEMENT PLAN FOR LIAM CLOSE`
+
+**Metadata block (immediately after H1, one item per line, each ending with two spaces):**
+```
+**Scout Name:** [Full Name]  
+**Current Rank:** [Rank] (earned MM/DD/YYYY)  
+**Target Rank:** [Rank]  
+**Plan Start Date:** [Month D, YYYY]  
+**Projected Completion Date:** [Month YYYY]  
+**Eagle Scout Deadline (18th Birthday):** [Month D, YYYY]  
+```
+Omit Eagle deadline line if target rank is below Eagle.
+
+**Monthly plan H3 headers** — must follow this exact format:
+```
+### [MONTH IN CAPS] [YEAR] (Weeks N–N)
+```
+Examples: `### APRIL 2026 (Weeks 1–2)`, `### JUNE 2026 (Weeks 5–8)`
+
+Within each month block, use these exact bold labels (they become separate styled sections in the HTML card):
+- `**Theme:**` — one-line description
+- `**Checklist of Targeted Requirements:**` — followed by `- [ ]` items
+- `**Active Timers:**` — followed by bullet list of running countdowns
+- `**Leader Actions Needed:**` — followed by bullet list
+
+**Weekly plan H3 headers** — must follow this exact format:
+```
+### WEEK [N]: [Month] [D]–[D], [YYYY]
+```
+Examples: `### WEEK 1: April 14–20, 2026`, `### WEEK 8: June 2–8, 2026`
+
+Within each week block, use these exact bold labels:
+- `**Theme:**` — one-line description
+- `**Specific Requirements Targeted:**` — bullet list
+- `**Signature/Action Items:**` — `- [ ]` checklist
+- `**This Week's Focus:**` — one-sentence summary (renders as highlighted footer)
+
+**Time-Sensitive Countdown table** — columns must be in this exact order:
+```
+| Requirement | Minimum Duration | Clock Starts | Earliest Finish |
+```
+Dates in "Clock Starts" and "Earliest Finish" columns must include the month name spelled out and a four-digit year (e.g., `June 1, 2026` or `August 2026`). This is what the Gantt chart parser reads.
+
+**Status emoji** — use only these four, exactly as shown:
+- ✅ — complete
+- 🔄 — in-progress
+- ⬜ — not started
+- ⏱️ — time-based / duration requirement
+
 **Quality checks before writing:**
 - All time-based requirements accounted for in timeline
 - No prerequisite scheduled after its dependent

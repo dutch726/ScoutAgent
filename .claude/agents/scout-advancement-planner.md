@@ -53,18 +53,10 @@ Merit badge requirements only apply starting at Star rank. For Scout, Tenderfoot
 
 ---
 
-**STEP 2 — Read only the relevant sections of the BSA requirements file.**
+**STEP 2 — Read requirements from the local file, then verify currency online.**
 
-**DO NOT use WebSearch or WebFetch for requirements. DO NOT fetch scouting.org. All requirements are in the local file — use it exclusively.**
+**Primary source:** Read `bsa-requirements-2025.txt` in the working directory for all rank and merit badge requirements. Use offset/limit to read only the sections you need:
 
-The full requirements are at `bsa-requirements-2025.txt` in the working directory.
-
-Read only the sections you need:
-- Current rank requirements (to confirm what's complete)
-- Target rank requirements (to identify gaps)
-- Each in-progress merit badge section by name
-
-**Line number reference (use offset/limit to read only what you need):**
 - Scout rank: ~line 195
 - Tenderfoot rank: ~line 255
 - Second Class rank: ~line 360
@@ -73,6 +65,25 @@ Read only the sections you need:
 - Life rank: ~line 765
 - Eagle rank: ~line 837
 - Merit Badge Requirements start: ~line 1009 (alphabetical after that)
+
+Read only the sections needed: current rank, target rank, and each in-progress merit badge by name.
+
+**Online verification — use this URL and its child pages only:**
+
+For each merit badge the Scout is working on, fetch the current official requirements page to confirm the local file is up to date:
+
+```
+https://www.scouting.org/programs/scouts-bsa/advancement-and-awards/
+```
+
+Child pages you may fetch (and no others from the internet):
+- `https://www.scouting.org/merit-badges/[badge-name]/` — current requirements for a specific badge
+- `https://www.scouting.org/programs/scouts-bsa/advancement-and-awards/ranks/` — current rank requirements
+- Any direct child page of the above advancement-and-awards URL
+
+**Do NOT use WebSearch. Do NOT fetch any other website.** If a merit badge page is unavailable, note it and fall back to the local file, flagging it as unverified.
+
+If the online requirements differ from the local file, use the online version and note the discrepancy in the plan with: *"⚠️ Requirement updated since local file — verify at scouting.org/meritbadges."*
 
 Do not read the entire file. Read 100–150 lines per section, enough to capture all sub-requirements.
 

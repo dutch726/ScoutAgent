@@ -193,6 +193,17 @@ CSS = """
   .action-box li.checkbox-item .checkbox { color: var(--tan); }
   .action-box p  { font-size: 13px; color: rgba(255,255,255,.9); }
 
+  /* ── Merit badge requirement groups (weekly/monthly cards) ── */
+  .mb-group { margin: 6px 0 4px; }
+  .mb-group-name {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .6px; color: var(--green2);
+    margin: 7px 0 1px; padding: 2px 0;
+    border-bottom: 1px dotted var(--border);
+  }
+  .mb-group ul { margin-left: 0; }
+  .mb-req { font-weight: 600; color: var(--muted); font-size: 11px; margin-right: 3px; }
+
   /* ── Notes ── */
   .notes-box { background: var(--light); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 4px 0; }
   .notes-box li { font-size: 13px; margin: 4px 0; }
@@ -226,6 +237,19 @@ MONTH_NAMES = ['January','February','March','April','May','June',
 
 BAR_COLOURS = ['#1A4D2E','#2E6B42','#C8102E','#7A5C1E','#1a5fa8','#6B3A2E']
 
+# Matches "BadgeName Req#: description" — used to group requirements by badge in cards
+# Handles "Communication 4:", "Citizenship in Community 7a–7c:", "SC 7a:", "FC 9d:", etc.
+_MB_PAT = re.compile(r'^(⚡\s+)?([A-Z][A-Za-z ]{0,45}?)\s+(\d[\w.\u2013\-]*):\s+(.+)$')
+
+def _parse_mb(text):
+    """Return (badge, req, desc, synergy) if text matches a requirement pattern, else None."""
+    if '+' in text[:70]:   # synergy items spanning multiple badges — leave ungrouped
+        return None
+    m = _MB_PAT.match(text.strip())
+    if m:
+        return m.group(2).strip(), m.group(3), m.group(4), bool(m.group(1))
+    return None
+
 def inline(text):
     for em, cls in [('✅','complete'),('🔄','progress'),('⬜','notstarted'),('⏱️','time')]:
         text = text.replace(em, f'<span class="st st-{cls}">{em}</span>')
@@ -252,23 +276,106 @@ def parse_table(lines):
     tb = ''.join('<tr>' + ''.join(f'<td>{inline(c)}</td>' for c in r) + '</tr>' for r in body)
     return f'<table><thead>{th}</thead><tbody>{tb}</tbody></table>'
 
-def parse_list(items, ordered=False):
-    out = []
-    for line in items:
-        m = re.match(r'^[-*] \[([ x])\] (.*)', line)
-        if m:
-            checked = m.group(1)=='x'
-            cls = 'checked' if checked else ''
-            icon = '☑' if checked else '☐'
-            out.append(f'<li class="checkbox-item {cls}"><span class="checkbox">{icon}</span>{inline(m.group(2))}</li>')
-        elif re.match(r'^[-*] ', line):
-            out.append(f'<li>{inline(line[2:])}</li>')
-        elif re.match(r'^\d+\. ', line):
-            out.append(f'<li>{inline(re.sub(r"^\d+\. ","",line))}</li>')
-    tag = 'ol' if ordered else 'ul'
-    return f'<{tag}>{"".join(out)}</{tag}>'
+def parse_list(items, ordered=False, group_badges=False):
+    if not group_badges:
+        out = []
+        for line in items:
+            m = re.match(r'^[-*] \[([ x])\] (.*)', line)
+            if m:
+                checked = m.group(1)=='x'
+                cls = 'checked' if checked else ''
+                icon = '☑' if checked else '☐'
+                out.append(f'<li class="checkbox-item {cls}"><span class="checkbox">{icon}</span>{inline(m.group(2))}</li>')
+            elif re.match(r'^[-*] ', line):
+                out.append(f'<li>{inline(line[2:])}</li>')
+            elif re.match(r'^\d+\. ', line):
+                out.append(f'<li>{inline(re.sub(r"^\d+\. ","",line))}</li>')
+        tag = 'ol' if ordered else 'ul'
+        return f'<{tag}>{"".join(out)}</{tag}>'
 
-def convert_md(md_text):
+    # ── Grouped mode: detect consecutive same-badge items and cluster them ──
+    categorized = []
+    for line in items:
+        m_cb = re.match(r'^[-*] \[([ x])\] (.*)', line)
+        m_ul = re.match(r'^[-*] (.*)', line)
+        m_ol = re.match(r'^\d+\. (.*)', line)
+        if m_cb:
+            text = m_cb.group(2)
+            mb = _parse_mb(text)
+            categorized.append(('mb' if mb else 'checkbox', m_cb.group(1)=='x', text, mb))
+        elif m_ul:
+            text = m_ul.group(1)
+            mb = _parse_mb(text)
+            categorized.append(('mb' if mb else 'bullet', False, text, mb))
+        elif m_ol:
+            categorized.append(('ol', False, m_ol.group(1), None))
+
+    html_parts = []
+    pending_li = []
+
+    def flush_pending():
+        if pending_li:
+            tag = 'ol' if ordered else 'ul'
+            html_parts.append(f'<{tag}>{"".join(pending_li)}</{tag}>')
+            pending_li.clear()
+
+    i = 0
+    while i < len(categorized):
+        kind, checked, text, mb = categorized[i]
+        if kind == 'mb':
+            badge = mb[0]
+            # Collect consecutive items for the same badge
+            j = i + 1
+            while j < len(categorized) and categorized[j][0] == 'mb' and categorized[j][3][0] == badge:
+                j += 1
+            if j - i >= 2:
+                flush_pending()
+                group_items = []
+                for k in range(i, j):
+                    _, c, _, (_, r, d, syn) = categorized[k]
+                    icon = '☑' if c else '☐'
+                    cls = 'checked' if c else ''
+                    syn_mark = '⚡ ' if syn else ''
+                    group_items.append(
+                        f'<li class="checkbox-item {cls}">'
+                        f'<span class="checkbox">{icon}</span>'
+                        f'<span class="mb-req">{syn_mark}{r}:</span> {inline(d)}</li>'
+                    )
+                html_parts.append(
+                    f'<div class="mb-group">'
+                    f'<div class="mb-group-name">{badge}</div>'
+                    f'<ul>{"".join(group_items)}</ul>'
+                    f'</div>'
+                )
+                i = j
+            else:
+                # Single MB item — render normally
+                icon = '☑' if checked else '☐'
+                cls = 'checked' if checked else ''
+                syn_mark = '⚡ ' if mb[3] else ''
+                pending_li.append(
+                    f'<li class="checkbox-item {cls}">'
+                    f'<span class="checkbox">{icon}</span>'
+                    f'{syn_mark}{inline(text)}</li>'
+                )
+                i += 1
+        elif kind in ('checkbox', 'bullet'):
+            icon = '☑' if checked else '☐'
+            cls = 'checked' if checked else ''
+            pending_li.append(
+                f'<li class="checkbox-item {cls}">'
+                f'<span class="checkbox">{icon}</span>'
+                f'{inline(text)}</li>'
+            )
+            i += 1
+        else:
+            pending_li.append(f'<li>{inline(text)}</li>')
+            i += 1
+
+    flush_pending()
+    return ''.join(html_parts)
+
+def convert_md(md_text, group_badges=False):
     lines = md_text.split('\n')
     out, i = [], 0
     while i < len(lines):
@@ -291,7 +398,7 @@ def convert_md(md_text):
             block = []
             while i < len(lines) and (is_ul(lines[i]) or re.match(r'^[-*] \[', lines[i])):
                 block.append(lines[i]); i += 1
-            out.append(parse_list(block)); continue
+            out.append(parse_list(block, group_badges=group_badges)); continue
         if is_ol(line):
             block = []
             while i < len(lines) and is_ol(lines[i]):
@@ -475,7 +582,7 @@ def render_month_grid(section_content):
         body4 = re.sub(r'\*\*Theme:\*\*.*\n?', '', body3)
         body4 = re.sub(r'\*\*Objective:\*\*.*\n?', '', body4).strip()
 
-        main_html   = convert_md(body4)
+        main_html   = convert_md(body4, group_badges=True)
         timer_html  = (f'<div class="timer-block">⏱ {convert_md(timers)}</div>' if timers.strip() else '')
         leader_html = (f'<div class="leader-note">👤 {convert_md(leader)}</div>' if leader.strip() else '')
 
@@ -517,7 +624,7 @@ def render_week_grid(section_content):
             f'<div class="week-card">'
             f'<div class="week-card-header"><span class="week-num">{inline(week_num)}</span><span class="week-dates">{week_dates}</span></div>'
             + (f'<div class="week-card-theme">{inline(theme)}</div>' if theme else '')
-            + f'<div class="week-card-body">{convert_md(body2)}</div>'
+            + f'<div class="week-card-body">{convert_md(body2, group_badges=True)}</div>'
             + (f'<div class="week-focus">{inline(focus)}</div>' if focus else '')
             + '</div>'
         )
